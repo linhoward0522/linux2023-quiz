@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 uint64_t next_pow2(uint64_t x)
 {
     x |= x >> 1;
@@ -11,10 +13,10 @@ uint64_t next_pow2(uint64_t x)
     x |= x >> 16;
     x |= x >> 32;
     return x + 1;
-}    
+}   
 
 
-uint64_t next_pow2_(uint64_t x)
+uint64_t next_pow2(uint64_t x)
 {
     if (!x)
         return 1;
